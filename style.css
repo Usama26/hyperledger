@@ -1,0 +1,381 @@
+body{
+	margin:0;
+	background-color:blue;
+}
+
+
+#container{
+	position:absolute;
+	height:1000px;
+	width:100%;
+	padding:0;
+	margin:0;
+	background-color:red;
+	
+}
+
+#background{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+
+	background-color:yellow;
+	background-size:100% 100%;
+	
+	}
+	
+	#loginForm{
+	position:fixed;
+	top:10%;
+	left:36%;
+	width:28%;
+	height:80%;
+	background-color:white;
+	
+	  -webkit-transition:all 0.7s ease;
+	  -moz-transition:all 0.7s ease 0s;
+	
+	}
+	#logo{
+	position:absolute;
+	top:8%;
+	height:30%;
+	left:5%;
+	width:90%;
+	background-image:url('rcLabs.png');
+	background-size:80% auto;
+	background-position:center;
+	background-repeat:no-repeat;
+	
+	  -webkit-transition:all 0.25s ease;
+	  -moz-transition:all 0.25s ease 0s;
+	
+	}
+	
+	#contactForm{
+	position:absolute;
+	top:45%;
+	left:10%;
+	width:80%;
+	height:45%;
+	
+	  -webkit-transition:all 0.25s ease;
+	  -moz-transition:all 0.25s ease 0s;
+	
+	}
+	
+	.btn{
+	border-radius:13px;
+	right:0px;
+	
+	}
+	
+	.form-control{
+	border:1px solid lightblue;
+	border-radius:0px;
+	border-left-color:lightblue;
+	}
+	
+	#newAcc{
+	position:absolute;
+	bottom:36%;
+	height:10%;
+	right:-2%;
+	width:56%;
+	background-image:url("https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Plus_in_circle.svg/155px-Plus_in_circle.svg.png");
+	background-size:14% 100%;
+	background-repeat:no-repeat;
+	text-align:right;
+	opacity:0.7;
+	cursor:pointer;
+	cursor:hand;
+	
+	
+	
+	}
+	
+	#newAcc:hover{
+	opacity:1;
+	
+	}
+	#socialButtons{
+	position:absolute;
+	bottom:5%;
+	width:50%;
+	left:25%;
+	height:8%;
+	
+	  -webkit-transition:all 0.25s ease;
+	  -moz-transition:all 0.25s ease 0s;
+	
+	}
+	
+	#fb{
+	position:absolute;
+	bottom:0%;
+	width:35px;
+	left:25%;
+	height:35px;
+	background-image:url(http://i781.photobucket.com/albums/yy99/ashleyryan85/1388396429_facebook_zps316d20b8.png);
+	background-size:100% 100%;
+	opacity:0.6;
+	cursor:pointer;
+	cursor:hand;
+	
+	}
+	
+	#fb:hover{
+	opacity:1;
+	
+	}
+	
+	#twitter{
+	position:absolute;
+	bottom:0%;
+	width:35px;
+	right:25%;
+	height:35px;
+	background-image:url(http://www.yogarecords.com/logos/icon-twitter.png);
+	background-size:100% 100%;
+	opacity:0.6;
+	cursor:pointer;
+	cursor:hand;
+	
+	}
+	
+	#twitter:hover{
+	opacity:1;
+	
+	}
+	
+	#copyright{
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	width:100%;
+	height:21px;
+	text-align:center;
+	
+	  -webkit-transition:all 0.25s ease;
+	  -moz-transition:all 0.25s ease 0s;
+	}
+	
+	#copyright a{
+	text-decoration:none;
+	color:black;
+	}
+	
+	#upperbar{
+	position:absolute;
+	top:0px;
+	left:0px;
+	height:40px;
+	width:100%;
+	z-index:20;
+	background-color:#e1e1e1;
+	}
+	
+	#close{
+	position:absolute;
+	top:5px;
+	right:4px;
+	height:20px;
+	width:20px;
+	background-image:url(http://www.leadacity.net/webroot/images/global/icons/icon-nav-close.png);
+	background-size:100% 100%;
+	opacity:0.4;
+	}
+	
+	#minimize{
+	position:absolute;
+	top:9px;
+	right:27px;
+	height:20px;
+	width:20px;
+	background-image:url(http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/rounded-glossy-black-icons-symbols-shapes/020739-rounded-glossy-black-icon-symbols-shapes-minimize.png);
+	background-size:100% 100%;
+	opacity:0.4;
+	
+	}
+	
+	#close:hover,#minimize:hover{
+	opacity:0.7;
+	cursor:pointer;
+	cursor:hand;
+	
+	
+	}
+	
+
+	}
+	
+	@media only screen and (max-width:1335px)
+	{
+	#newAcc{
+	width:60%;
+	
+	}
+	
+	}
+	
+	@media only screen and (max-width:1126px)
+	{
+	#newAcc{
+	font-size:13px;
+	
+	}
+	
+	}
+	
+	@media only screen and (max-width:1085px)
+	{
+	#newAcc{
+	bottom:16%;
+	width:64%;
+	background-size:15% 100%;
+	line-height:2;
+	
+	}
+	
+	}
+	
+	@media only screen and (max-width:1023px)
+	{
+	#loginForm{
+	width:35%;
+	left:32.5%;
+	
+	}
+	#newAcc{
+	bottom:35%;
+	}
+	
+	}
+	
+	@media only screen and (max-width:850px)
+	{
+	#loginForm{
+	width:40%;
+	left:30%;
+	
+	}
+	
+	}
+	
+	@media only screen and (max-width:720px)
+	{
+	#loginForm{
+	width:45%;
+	left:27.5%;
+	
+	}
+	
+	}
+	
+	@media only screen and (max-width:658px)
+	{
+	#loginForm{
+	width:50%;
+	left:25%;
+	
+	}
+	#newAcc{
+	bottom:30%;
+	}
+	}
+	
+	@media only screen and (max-width:578px)
+	{
+	#loginForm{
+	width:60%;
+	left:20%;
+	
+	}
+	#newAcc{
+	bottom:20%;
+	}
+	
+	}
+	
+	
+	@media only screen and (max-width:487px)
+	{
+	#loginForm{
+	width:70%;
+	left:15%;
+	
+	}
+	#newAcc{
+	opacity:0;
+	}
+	
+	}
+	
+	@media only screen and (max-width:410px)
+	{
+	#loginForm{
+	width:80%;
+	left:10%;
+	
+	
+	}
+	}
+	
+	@media only screen and (max-width:361px)
+	{
+	#fb{
+	left:10%;
+	
+	}
+	#twitter{
+	right:10%;
+	}
+	}
+	
+
+	#header{
+		position: absolute;
+		height:80px;
+		width:0px;
+		width:100%;
+		background-color: orange;
+
+	}
+
+	#logoHead{
+			position: absolute;
+			top:5%;
+			height:90%;
+			width:20%;
+			left:5%;
+
+	background-image:url('rcLabs.png');
+	background-size:auto 80%;
+	background-position:center;
+	background-repeat:no-repeat;
+
+	}
+
+	#navPanel{
+		position: absolute;
+		top:5%;
+		height:90%;
+		width:40%;
+		right:5%;
+
+	}
+
+
+	#bodyHolder{
+		position: absolute;
+		top:80px;
+		left:0px;
+		width:100%;
+		height:500px;
+		background-color: rgb(12, 87, 122);
+
+
+	}
+	

@@ -1,0 +1,105 @@
+.vendorAnimal{
+	position:relative;
+	height:160px;
+	width:80%;
+	background-color:red;
+	left:10%
+	
+}
+
+
+.innerBox{
+	position:relative;
+	left:15px;
+	margin:15px;
+	width:450px;
+	height:250px;
+	top:15px;
+	background-color:white;
+	display:inline-block;
+	border-radius:4px;
+	box-shadow:2px 2px 3px rgba(0,0,0,0.4);
+    -webkit-transition: all 1s ease;
+	-moz-transition : all 1s ease 0s;
+	
+}
+.boxHeader{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:25%;
+	background-color:rgb(247,247,247);
+	border-bottom: solid black rgb(190,190,190);
+	border-top-left-radius:4px;
+	border-top-right-radius:4px;
+}
+
+.boxBodyMain{
+	position:absolute;
+	top:25%;
+	left:10%;
+	width:80%;
+	height:50%;
+}
+.boxBody{
+	position:absolute;
+	top:25%;
+	left:5%;
+	width:90%;
+	height:50%;
+}
+
+.boxFooter{
+	position:absolute;
+	top:75%;
+	left:0px;
+	width:100%;
+	height:25%;
+	background-color:rgb(247,247,247);
+	border-top: solid black rgb(190,190,190);
+	border-bottom-left-radius:4px;
+	border-bottom-right-radius:4px;
+}
+
+.boxTitle{
+	position:absolute;
+	top:-5px;
+	left:5%;
+	height:70%;
+	width:90%;
+	text-transform:uppercase;
+}
+
+.companyName{
+	position:absolute;
+	bottom:0px;
+	height:40%;
+	left:5%;
+	width:90%;
+}
+
+#searchBox{
+	border:none;
+	height:50%;
+	width:100%;
+	font-size:40px;
+	border-bottom:solid gray 2px;
+	outline: none;
+}
+
+#searchBox:focus{
+
+	outline: none;
+}
+
+.cCodeHolder{
+	position:absolute;
+	right:1%;
+	width:95%;
+	top:8%;
+	height:90%;
+	color:rgb(58,175,86);
+	text-align:right;
+	font-size:85px;
+}

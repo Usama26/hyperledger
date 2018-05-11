@@ -1,0 +1,67 @@
+#container{
+
+	height:100%;
+	width:100%;
+	background-color:rgba(0,0,0,0.2);
+}
+
+#leftPanel{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:70%;
+	height:100%;
+	background-image:url('nav.png');
+	background-size:100% auto;
+	background-position:0 0;
+	background-repeat:no-repeat;
+	    -webkit-transition: all 1.5s ease;
+	-moz-transition : all 1.5s ease 0s;
+}
+
+#leftHeader{
+	position:absolute;
+	top:5%;
+	height:15%;
+	width:50%;
+	left:5%;
+	    -webkit-transition: all 1.5s ease;
+	-moz-transition : all 1.5s ease 0s;
+	background-image:url('rcLabs.png');
+	background-position:center;
+	background-size:auto 80%;
+	background-repeat:no-repeat;
+	border-radius:5px;
+}
+
+
+#leftNav{
+	position:absolute;
+	top:50%;
+	height:40%;
+	left:5%;
+	width:60%;
+
+	
+}
+
+#rightPanel{
+	position:absolute;
+	top:0px;
+	right:0px;
+	width:60%;
+	height:100%;
+
+	    -webkit-transition: all 1.5s ease;
+	-moz-transition : all 1.5s ease 0s;
+}
+
+#holderId{
+	    -webkit-transition: all 1s ease;
+	-moz-transition : all 1s ease 0s;
+}
+
+.navOption{
+	    -webkit-transition: all 1.5s ease;
+	-moz-transition : all 1.5s ease 0s;
+}

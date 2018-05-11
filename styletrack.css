@@ -1,0 +1,50 @@
+.trackRecord{
+	position:relative;
+	left:10%;
+	margin:15px;
+	width:70%;
+	height:170px;
+	top:15px;
+	display:inline-block;
+    -webkit-transition: all 1s ease;
+	-moz-transition : all 1s ease 0s;
+}
+
+.recordLeft,.recordRight{
+	position:absolute;
+	
+	width:33.33%;
+	height:100%;
+	top:0px;
+	background-color:rgba(0,0,0,0.2);
+	
+	
+}
+
+.recordRight{
+	right:0px;
+}
+
+.recordLeft{
+	left:0px;
+}
+.recordCenter{
+	position:absolute;
+	width:33.33%;
+	height:100%;
+	top:0px;
+	left:33.34%;
+	background-color:rgba(0,0,0,0.4);
+}
+
+.entityName{
+	width:100%;
+	position:absolute;
+	top:20%;
+	text-align:center;
+	color:white;
+	font-size:25;
+	padding-left:15px;
+	padding-right:15px;
+	
+}

@@ -1,0 +1,60 @@
+<html>
+	<head>
+		<title>Meat Management</title>
+		<link rel="stylesheet" href="main.css">
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div id="container">
+
+			
+			<div id="rightPanel">
+				<iframe style="position:absolute;width:60%;height:85%;top:7.5%;left:30%;border:none;opacity:0" id="holderId">
+				
+				</iframe>
+			</div>
+			
+			<div id="leftPanel">
+				<div id="leftHeader"></div>
+				<div id="leftNav" style="color:white">
+					<div id="option1" onclick="openOption1()">
+						<h1 class="navOption">Register Animal</h1>
+					</div>
+
+				</div>
+			</div>
+			
+
+		</div>
+
+	
+	</body>
+	
+	<script>
+		function openOption1(){
+	
+			document.getElementById('holderId').src = "farm.html";
+						document.getElementById('leftHeader').style.backgroundColor="white";
+			document.getElementById('leftPanel').style.width = "40%";
+			document.getElementById('leftPanel').style.backgroundSize = "auto 100%";
+			document.getElementById('leftPanel').style.backgroundPosition = "-220 0";
+			
+			document.getElementById('rightPanel').style.width = "97%";
+			
+			document.getElementById('holderId').style.opacity = "1";
+			
+			document.getElementsByClassName('navOption')[0].style.fontSize="23px";
+			document.getElementsByClassName('navOption')[1].style.fontSize="23px";
+		
+		}
+	
+	</script>
+
+	
+
+
+</html>

@@ -1,0 +1,181 @@
+<html>
+	<head>
+		<title>Meat Management</title>
+		<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div id="container">
+			<div id="header">
+				<div id="logoHead"></div>
+				<div id="navPanel"></div>
+			</div>
+			<div id="bodyHolder">
+
+
+
+			</div>
+
+		</div>
+
+		<div id="container-fluid">
+			<div id="loginForm">
+				<div id="logo"></div>
+				<div id="contactForm">
+					<form role="form">
+						<div class="form-group">
+							<input type="email" class="form-control" id="email" placeholder=" email address">
+						</div>
+						</br>
+						<div class="form-group">
+							<input type="password" class="form-control" id="pwd" placeholder=" password">
+						</div>
+						<button type="button" onclick="login()" class="btn btn-info btn-lg">sign in </button>
+					</form>
+					<div id="newAcc">Create a new account</div>
+				</div>
+				<div id="copyright">
+					<a href="https://www.facebook.com/roundCubeInc?fref=ts"><p>&#169; roundCube Labs</p></a>
+				</div>
+				<div id="upperbar">
+					<p id="loginText" style="line-height:2.5;-webkit-margin-start:20px;opacity:0.7;"><b>Login</b></p>
+					<div id="close" onclick="closer()"></div>
+					<div id="minimize" onclick="minimize()"></div>
+				</div>
+			</div>
+	
+	</body>
+
+	
+	<script>
+		function minimize(){
+		var logform = document.getElementById("loginForm");
+		var logo = document.getElementById("logo");
+		var cform = document.getElementById("contactForm");
+		var social=document.getElementById("socialButtons");
+		var developer=document.getElementById("copyright");
+		
+		if(logform.style.height!="40px")
+		{
+			logform.style.height="40px";
+			logform.style.top="0px";
+			logo.style.opacity="0";
+			cform.style.display="none";
+			cform.style.opacity="0";
+			social.style.display="none";
+			social.style.opacity="0";
+			developer.style.display="none";
+			developer.style.opacity="0";
+		}
+		else
+		{
+			logform.style.height="80%";
+			logform.style.top="10%";
+			logo.style.opacity="1";
+			cform.style.display="block";
+			cform.style.opacity="1";
+			social.style.display="block";
+			social.style.opacity="1";
+			developer.style.display="block";
+			developer.style.opacity="1";
+		
+		
+		}
+		
+		}
+		
+		function closer(){
+		var loginform = document.getElementById("loginForm");
+		loginform.style.opacity="0";
+		loginform.style.display="none";
+		}
+	
+	</script>
+
+	
+<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDG3dz2p51ojItR8AdARYU56WtU-r1bK24",
+    authDomain: "hackathon-99743.firebaseapp.com",
+    databaseURL: "https://hackathon-99743.firebaseio.com",
+    projectId: "hackathon-99743",
+    storageBucket: "hackathon-99743.appspot.com",
+    messagingSenderId: "660240377366"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<script>
+	function login(){
+		var email=document.getElementById("email").value;
+		var pass=document.getElementById("pwd").value;
+			alert(email+" "+pass);
+			firebase.auth().signInWithEmailAndPassword(email, pass).then(function(user) {
+			
+			
+			// user signed in
+			checkForStateChange();
+			
+			
+			
+			}).catch(function(error) {
+			  // Handle Errors here.
+			  var errorCode = error.code;
+			  var errorMessage = error.message;
+			  
+			  console.log(errorMessage);
+			  //var errorHolder=document.getElementById("errorHolder");
+			  
+
+				//notModTitle.innerHTML="Login Failed!";
+				//notModBody.innerHTML=errorMessage;
+				//document.getElementById("notiButton").click();
+				//errorHolder.innerText="Error:"+errorMessage;
+			});;
+			
+		}
+
+		function checkForStateChange(){	
+		firebase.auth().onAuthStateChanged(function(user) {
+		  if (user) {
+			var userid=user.uid;
+
+
+			var refs= firebase.database().ref().child(userid);
+
+		refs.once('value').then(function(snap) {
+			//console.log(snap.val().firstName);
+			var fName=snap.val().type;
+			alert(fName);
+
+			if(fName=="vendor"){
+				document.location="mainVendor.html";
+			}
+			else if(fName=="farm"){
+				document.location="mainFarm.html";
+			}
+			else{
+				document.location="mainButcher.html";
+			}
+
+			
+		});
+
+
+
+		  } else {
+			
+
+		  }
+		});
+	}
+
+</script>
+
+</html>
